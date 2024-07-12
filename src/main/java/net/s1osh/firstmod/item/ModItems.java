@@ -6,6 +6,7 @@ import net.minecraft.world.item.Item;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
+import net.s1osh.firstmod.item.custom.MetalDetectorItem;
 
 public class ModItems {
     public static final DeferredRegister<Item> ITEMS =
@@ -17,6 +18,12 @@ public class ModItems {
     // Raw Sapphire
     public static final RegistryObject<Item> RAW_SAPPHIRE = ITEMS.register("raw_sapphire",
             () -> new Item(new Item.Properties()));
+
+    // Metal Detector
+    public static final RegistryObject<Item> METAL_DETECTOR = ITEMS.register("metal_detector",
+            () -> new MetalDetectorItem(new Item.Properties().durability(100)));
+
+
     // Moonk
     public static final RegistryObject<Item> MOONK = ITEMS.register("moonk",
             () -> new Item(new Item.Properties()));

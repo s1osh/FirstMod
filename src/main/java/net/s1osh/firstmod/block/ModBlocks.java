@@ -4,6 +4,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.s1osh.firstmod.FirstMod;
+import net.s1osh.firstmod.block.custom.SoundBlock;
 import net.s1osh.firstmod.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -26,6 +27,10 @@ public class ModBlocks {
     // RAW SAPPHIRE BLOCK
     public static final RegistryObject<Block> RAW_SAPPHIRE_BLOCK = registerBlock("raw_sapphire_block",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).sound(SoundType.COPPER)));
+    // RAW SAPPHIRE BLOCK
+    public static final RegistryObject<Block> CHRIS_BLOCK = registerBlock("chris_block",
+            () -> new SoundBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK)));
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block); // Register Block
