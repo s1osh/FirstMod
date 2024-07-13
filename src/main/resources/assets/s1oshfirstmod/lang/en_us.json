@@ -6,7 +6,16 @@
 
   "block.s1oshfirstmod.sapphire_block": "Block of Sapphire",
   "block.s1oshfirstmod.raw_sapphire_block": "Block of Raw Sapphire",
+  "block.s1oshfirstmod.sapphire_ore": "Sapphire Ore",
+  "block.s1oshfirstmod.deepslate_sapphire_ore": "Deepslate Sapphire Ore",
+  "block.s1oshfirstmod.end_stone_sapphire_ore": "Endstone Sapphire Ore",
+  "block.s1oshfirstmod.nether_sapphire_ore": "Nether Sapphire Ore",
+
   "block.s1oshfirstmod.chris_block": "Block of Fat",
+  "block.s1oshfirstmod.strawberry": "Strawberry",
+  "block.s1oshfirstmod.pine_cone": "Pinecone",
+
+  "tooltip.s1oshfirstmod.metal_detector.tooltip": "Finds valuables underground!",
 
   "creativetab.moonk_tab": "Moonk Tab"
 }
