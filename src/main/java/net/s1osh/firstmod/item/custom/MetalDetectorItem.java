@@ -17,7 +17,7 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.List;
 
-public class MetalDetectorItem extends Item{
+public class MetalDetectorItem extends Item {
     public MetalDetectorItem(Properties pProperties) {
         super(pProperties);
     }
@@ -29,17 +29,17 @@ public class MetalDetectorItem extends Item{
             Player player = pContext.getPlayer();
             boolean foundBlock = false;
 
-            for(int x = 0; x <= positionClicked.getY() + 64; x++) {
-                BlockState state = pContext.getLevel().getBlockState(positionClicked.below(x));
+            for(int i = 0; i <= positionClicked.getY() + 64; i++) {
+                BlockState state = pContext.getLevel().getBlockState(positionClicked.below(i));
 
-                if(isValuableBlock(state)) {
-                    outputValuableCoordinates(positionClicked.below(x), player, state.getBlock());
+                if (isValuableBlock(state)) {
+                    outputValuableCoordinates(positionClicked.below(i), player, state.getBlock());
                     foundBlock = true;
                 }
             }
 
             if(!foundBlock) {
-                player.sendSystemMessage(Component.literal("No valuables found!"));
+                player.sendSystemMessage(Component.literal("No valuables Found!"));
             }
         }
 
@@ -51,13 +51,13 @@ public class MetalDetectorItem extends Item{
 
     @Override
     public void appendHoverText(ItemStack pStack, @Nullable Level pLevel, List<Component> pTooltipComponents, TooltipFlag pIsAdvanced) {
-        pTooltipComponents.add(Component.translatable("tooltip.s1oshfirstmod.metal_detector.tooltip"));
+        pTooltipComponents.add(Component.translatable("tooltip.s1osh.metal_detector.tooltip"));
         super.appendHoverText(pStack, pLevel, pTooltipComponents, pIsAdvanced);
     }
 
     private void outputValuableCoordinates(BlockPos blockPos, Player player, Block block) {
         player.sendSystemMessage(Component.literal("Found " + I18n.get(block.getDescriptionId()) + " at " +
-                "(" + blockPos.getX() + ", " + blockPos.getY() + ", " + blockPos.getZ() + ")"));
+                "(" + blockPos.getX() + ", " + blockPos.getY() + "," + blockPos.getZ() + ")"));
     }
 
     private boolean isValuableBlock(BlockState state) {
