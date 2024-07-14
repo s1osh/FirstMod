@@ -40,7 +40,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> END_SAPPHIRE_ORE = registerBlock("end_sapphire_ore",
             () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK).sound(SoundType.STONE)));
 
-    // RAW SAPPHIRE BLOCK
+    // CHRIS BLOCK
     public static final RegistryObject<Block> CHRIS_BLOCK = registerBlock("chris_block",
             () -> new SoundBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.IRON_BLOCK)));
 
